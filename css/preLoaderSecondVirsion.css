@@ -1,126 +1,106 @@
 .preloader {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 999;
-    background-color: #E5E5E5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .preloader_coins {
-    display: flex;
-    flex-direction: column-reverse;
-    position: relative;
-
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
 }
-
-
-
-.preloader_coins img{
-    width: 10vw;
+.preloader_coins img {
+  width: 10vw;
 }
 
 .preloader_coins-item {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 0vw;
-
-    /* bottom: 0vw; */
-    /* left: 6vw; */
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0vw;
 }
 .preloader_coins-item:first-child {
-    left: 2.2vw;
-    bottom: 0.6vw;
-    width: 3vw;
-    animation: firstCoin 6s infinite;
-    animation-timing-function: linear;
+  left: 2.2vw;
+  bottom: 0.6vw;
+  width: 3vw;
+  animation: firstCoin 6s infinite;
+  animation-timing-function: linear;
 }
 .preloader_coins-item:nth-child(2) {
-    left: 5.1vw;
-    bottom: 3.6vw;
-    animation: secondCoin 6s infinite;
-    animation-timing-function: linear;
+  left: 5.1vw;
+  bottom: 3.6vw;
+  animation: secondCoin 6s infinite;
+  animation-timing-function: linear;
 }
 .preloader_coins-item:nth-child(3) {
-    left: 1.5vw;
-    bottom: 5.3vw;
-    animation: treeCoin 6s infinite;
-    animation-timing-function: linear;
+  left: 1.5vw;
+  bottom: 5.3vw;
+  animation: treeCoin 6s infinite;
+  animation-timing-function: linear;
 }
 
 @keyframes firstCoin {
-    0%{
-    }
-    33%{
-    }
-    34%{
-    }
-    100%{
-    }
+  0% {
+  }
+  33% {
+  }
+  34% {
+  }
+  100% {
+  }
 }
 @keyframes secondCoin {
-    0%{
-        width: 0vw;
-    }
-    33%{
-        width: 0vw;
-    }
-    66%{
-        width: 3vw;
-    }
-    67%{
-        width: 0vw;
-    }
-    100%{
-        width: 0vw;
-    }
+  0% {
+    width: 0vw;
+  }
+  33% {
+    width: 0vw;
+  }
+  66% {
+    width: 3vw;
+  }
+  67% {
+    width: 0vw;
+  }
+  100% {
+    width: 0vw;
+  }
 }
 @keyframes treeCoin {
-    0%{
-        width: 0vw;
-    }
-    33%{
-        width: 0vw;
-    }
-    66%{
-        width: 0vw;
-    }
-    99%{
-        width: 3vw;
-    }
-    100%{
-        width: 0vw;
-    }
+  0% {
+    width: 0vw;
+  }
+  33% {
+    width: 0vw;
+  }
+  66% {
+    width: 0vw;
+  }
+  99% {
+    width: 3vw;
+  }
+  100% {
+    width: 0vw;
+  }
 }
 
-.preloader_coins-item img{
-    width: 100%;
+.preloader_coins-item img {
+  width: 100%;
 }
-
-.preloader_coins-item img.preloader_coint_dollar{
-    position: absolute;
-    width: 40%;
+.preloader_coins-item img.preloader_coint_dollar {
+  position: absolute;
+  width: 40%;
 }
-
-.preloader_flasks{
-    position: relative;
+.preloader_flasks {
+  position: relative;
 }
-.preloader_flasks img{
-    width: 10vw;
+.preloader_flasks img {
+  width: 10vw;
 }
-
-@media (max-width: 768px) {
-    
-}
-
-@media (max-width: 500px) {
-
-}
-
-
