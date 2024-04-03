@@ -1,56 +1,31 @@
 <?php
-// Import PHPMailer classes into the global namespace
-// These must be at the top of your script, not inside a function
-
-
-
-
-
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
-
 
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-
-$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+$mail = new PHPMailer(true);
 try {
-    //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';                  // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'eldarlebedev@gmail.com';             // SMTP username
-    $mail->Password = 'eldar2517';                           // SMTP password
-    $mail->SMTPSecure = 'ssl';                            // Enable SSL encryption, TLS also accepted with port 465
-    $mail->Port = 465;                                    // TCP port to connect to
-
-    //Recipients
-    $mail->setFrom('eldarlebedev@gmail.com', 'Eldar');          //This is the email your form sends From
-    // $mail->addAddress('recipient@dreamhost.com', 'Joe User'); // Add a recipient address
-    $mail->addAddress('ededygoededy@gmail.com');               // Name is optional
-    //$mail->addReplyTo('info@example.com', 'Information');
-    //$mail->addCC('cc@example.com');
-    //$mail->addBCC('bcc@example.com');
-
-    //Attachments
-    //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->SMTPDebug = 2;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'eldarlebedev@gmail.com';
+    $mail->Password = 'eldar2517';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
+    $mail->setFrom('eldarlebedev@gmail.com', 'Eldar');
+    $mail->addAddress('ededygoededy@gmail.com');
+    $mail->isHTML(true);
     $mail->Subject = 'Subject line goes here';
     $mail->Body    = 'Body text goes here';
-    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
     $mail->send();
+
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
-
-?>
